@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-lg: 860px;
+}
+
+body,
+html {
+  background-color: #f7f7f4;
+  font-family: var(--font-manrope);
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "RecoletaRegular";
+  src: url("/font/Recoleta-RegularDEMO.otf") format("opentype");
+}
+@font-face {
+  font-family: "RecoletaMedium";
+  src: url("/font/Recoleta-Medium.otf") format("opentype");
+}
+
+.font-RecoletaRegular {
+  font-family: "RecoletaRegular";
+}
+.font-RecoletaMedium {
+  font-family: "RecoletaMedium";
+}
+.font-jetBrains {
+  font-family: var(--font-jetBrains);
+}
+.font-caveat {
+  font-family: var(--font-caveat);
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee--inner {
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee-up .marquee--inner {
+  animation-name: marqueeUp;
+}
+
+.marquee-down .marquee--inner {
+  animation-name: marqueeUp;
+  animation-direction: reverse;
+}
+
+@keyframes marqueeUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+.scrollAnimation {
+  animation: scrollAnim 0.7s linear infinite alternate;
+}
+
+@keyframes scrollAnim {
+  0% {
+    transform: translateY(0) rotate(5deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(10px) rotate(-12deg);
+  }
+}

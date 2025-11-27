@@ -1,6 +1,4 @@
-import HeroSection from "@/components/HeroSection";
-import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
+
 import LenisScroll from "@/components/Lenis";
 import Hero from "@/components/home/Hero";
 

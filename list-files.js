@@ -5,7 +5,7 @@ const path = require('path');
 const IGNORED_FOLDERS = new Set(['node_modules', '.next', 'dist', '.git', 'out', 'public', 'ui']);
 
 // Specific files to ignore
-const IGNORED_FILES = new Set(['README.md', 'package-lock.json', 'all_files.txt']);
+const IGNORED_FILES = new Set(['README.md', 'package-lock.json', 'all_files.txt','types.ts']);
 
 // File extensions to ignore (e.g., image types)
 const IGNORED_EXTENSIONS = new Set([

@@ -1,17 +1,14 @@
-import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import Button from "../shared/Button";
 import Heading from "../shared/Heading";
+import Logo from "../shared/Logo";
 
 export default function Footer() {
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/" },
-    { label: "Our Values", href: "/" },
-    { label: "Contact us", href: "/" },
   ];
 
   return (
@@ -19,12 +16,7 @@ export default function Footer() {
       <div className="flex justify-between lg:items-center flex-col gap-10 lg:gap-0 lg:flex-row">
         <div className="max-w-[551px] w-full">
           {/* logo */}
-          <div className="inline-block gap-8">
-            <div className="flex justify-center items-center">
-              <Image src={"/logo.svg"} alt="logo" width={32} height={39} />
-              <span className="font-semibold text-2xl">GAG</span>
-            </div>
-          </div>
+          <Logo />
           <Heading
             text="Subscribe to our newsletter and get our weekly blogs"
             className="text-[32px] leading-[38px] lg:text-[40px] lg:leading-[46px] mt-6"
@@ -32,7 +24,7 @@ export default function Footer() {
           <div className="flex items-end gap-4 mt-5">
             <input
               type="text"
-              placeholder="Youremial@example.com"
+              placeholder="Youremail@example.com"
               className="w-full max-w-[278px] shadow-[0px_3px_0px_0px_#EEEEEE] font-[400] leading-6 text-[16px] bg-white py-3 outline-none px-3.5 placeholder:text-[#929292] rounded-[16px] border-[1px] border-[#3D3D3D1A]"
             />
             <Button text="Submit" />

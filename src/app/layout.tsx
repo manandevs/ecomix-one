@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import {  Caveat, JetBrains_Mono, Manrope } from "next/font/google";
+import { Caveat, JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
+import LenisScroll from "@/components/shared/Lenis";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -29,14 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${manrope.variable} ${jetBrains.variable} ${caveat.variable} antialiased`}
-      >
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${manrope.variable} ${jetBrains.variable} ${caveat.variable} antialiased`}>
+          {children}
+          <LenisScroll />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

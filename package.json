@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/elements": "^0.23.86",
+    "@clerk/nextjs": "^6.35.5",
+    "clsx": "^2.1.1",
+    "firebase": "^12.6.0",
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
     "lenis": "^1.2.3",
-    "next": "15.2.3",
+    "next": "^15.5.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

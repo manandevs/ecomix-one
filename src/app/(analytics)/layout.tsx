@@ -2,7 +2,7 @@ import Sidebar, { SidebarItem } from '@/app/(analytics)/_components/layout/Sideb
 import React from 'react';
 import { auth } from '@clerk/nextjs/server';
 import { navigationItems } from '@/config/navigation';
-import { Role } from '@/types/next-auth';
+import { Role } from '@/types';
 import Header from './_components/layout/header';
 
 interface AnalyticsLayoutProps {

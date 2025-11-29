@@ -1,6 +1,7 @@
 export * from './auth';
 export * from './user';
 export * from './navigation';
+export * from './product';
 export * from './order';
 export * from './inventory';
 export * from './invoice';

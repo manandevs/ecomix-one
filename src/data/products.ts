@@ -1,4 +1,4 @@
-import { ProductCard } from "@/types/types";
+import { ProductCard } from "@/types";
 
 export const productsData: ProductCard[] = [
   {
